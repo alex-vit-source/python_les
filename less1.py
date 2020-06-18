@@ -4,7 +4,7 @@ def func():
 print ('sdfdsf', a)
 if a==12:
     func()
-print ("123")
+print ("Buuu")
 
 
 
