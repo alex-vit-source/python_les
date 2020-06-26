@@ -41,6 +41,14 @@ def win(pole, xstep):
             x=False
             win=False
     return win
+
+def handle(turn):
+    if turn==True:
+        button=str(input ('Ход игрока X. Выберите позицию крестика. Клавиши q,w,e,a,s,d,z,x,c - '))
+        if button==q:
+            
+
+
 field=begin_game()
 print_field(field)
 win_end=win(field, True)
