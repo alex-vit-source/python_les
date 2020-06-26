@@ -42,18 +42,31 @@ def win(pole, xstep):
             win=False
     return win
 
-def handle(turn):
-    if turn==True:
-        button=str(input ('Ход игрока X. Выберите позицию крестика. Клавиши q,w,e,a,s,d,z,x,c - '))
-        if button==q:
-            
+def handle(turnX):
+    dict_button={'q':0,'w':1,'e':2,'a':3,'s':4,'d':5,'z':6,'x':7,'c':8}
+    if turnX==True:
+        znak='X'
+    else:
+        znak='O'
+    while True:
+        try:
+            button= dict_button[str(input ('Ход игрока X. Выберите позицию крестика. Клавиши q,w,e,a,s,d,z,x,c - '))]
+            return button, znak
+        except KeyError as e:
+            print ('Не правильно нажата кнопка. Введите ещё раз')
+
+
+        
+
+
 
 
 field=begin_game()
 print_field(field)
 win_end=win(field, True)
 print ('Win_end = ', win_end)
-
+but,who=handle(True)
+print ('Позиция - ', but, type(but), ' Знак ', who, type(who))
 
         
 
