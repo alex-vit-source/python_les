@@ -32,8 +32,6 @@ if __name__ == '__main__':
     shout('i am here')
 
 
-
-
 @<MY_DECOR_NAME>
 def sum1(a, b):
     return a+b
