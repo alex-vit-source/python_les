@@ -6,6 +6,6 @@ class ExitCommand(object):
     @staticmethod
     def label():
         return 'exit'
-
-    def perform(self, *args, **kwargs):
+    @staticmethod
+    def perform():
         raise UserExitException('See you next time!')

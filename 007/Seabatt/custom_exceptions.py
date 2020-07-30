@@ -4,5 +4,4 @@
 
 
 class UserExitException(KeyboardInterrupt):
-    print('Запуск KeyboardInterrupt')
     pass
