@@ -17,9 +17,8 @@ def  task1():
 
 y=task1()
 print(next(y))
-print(next(y))
-print(next(y))
-print(next(y))
-print(next(y))
-print(list(y))
+
+
+z=gen_range(1,20)
+
 
