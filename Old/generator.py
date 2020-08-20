@@ -19,6 +19,6 @@ y=task1()
 print(next(y))
 
 
-z=gen_range(1,20)
+z=gen_range(1,20,2)
 
 
