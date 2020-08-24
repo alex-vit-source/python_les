@@ -31,7 +31,7 @@ if __name__ == '__main__':
     whisper('Hello')
     shout('i am here')
 
-
+'''
 @<MY_DECOR_NAME>
 def sum1(a, b):
     return a+b
@@ -49,3 +49,4 @@ def dv2(**kwargs):
     return kwargs.values()
 
 v2 = dv2(**{'a': 1, 'b': 2})
+'''
