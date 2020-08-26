@@ -1,0 +1,19 @@
+{
+    "array": [
+        1,
+        2,
+        "3z"
+    ],
+    "bit": true,
+    "chislo": 123,
+    "new_value": "secret",
+    "nothing": null,
+    "object": {
+        "key": [
+            "val",
+            false,
+            true
+        ]
+    },
+    "stroka": "ABC"
+}
