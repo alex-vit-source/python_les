@@ -1,7 +1,14 @@
+import os
+
 from flask import Flask
 from werkzeug.routing import BaseConverter
-app = Flask(__name__)
 
+app = Flask(__name__)
+app.config.update(
+    DEBUG=True,
+    SECRET_KEY='S',
+    WTF_CSRF_ENABLED=False,
+)
 '''
 #@app.route('/sum/<test>') # причем вместо test можно в браузере писать что угодно
 @app.route('/sum/<path:test>') # тогда в test можно писать /tea/as/asd
