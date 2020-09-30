@@ -5,6 +5,7 @@ from flask.json import jsonify
 # pip install flask-WTF
 from flask_wtf import FlaskForm
 from wtforms import StringField, DecimalField, validators, ValidationError
+from dynaconf import settings
   # для того чтобы через переменную окружения 
 
 
@@ -21,8 +22,12 @@ app.config.update(
 '''
 #______________________________________________________
 #Посложнее вариант установки параметров
-app.config.update(**settings.as_dict())
-app.debug = settings.DEBUG # На всякий случай
+app.config.update(
+    DEBUG=settings.DEBUG,
+    SECRET_KEY=settings.SECRET_KEY,
+    WTF_CSRF_ENABLED=settings.WTF_CSRF_ENABLED,
+)
+
 
 
 class Number(object):
@@ -79,8 +84,12 @@ def guest(player):
       # в переменной лежит адрес маршрута     
 
 if __name__ == '__main__':
-   # print (os.environ['FLASK_RANDOM'])
-    flask_random_seed =1 # os.environ['FLASK_RANDOM']
+    print ('ENV - ',os.environ['ENV_FOR_DYNACONF'])
+    print('DEBUG - ',app.config['DEBUG'])
+    print('KEY - ',app.config['SECRET_KEY'])
+    print (os.environ['FLASK_RANDOM'])
+
+    flask_random_seed =os.environ['FLASK_RANDOM']
     if (flask_random_seed is None):
         print ('SEED не задан')
         exit()

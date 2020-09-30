@@ -1,14 +1,15 @@
 [default]
-name = "Bruno"
+name = "GAV"
 
 [development]
 debug = true
+wtf_csrf_enabled = false
 
 [production]
 debug = false
-key = "12345"
+wtf_csrf_enabled = true
 
 [sasha]
-debug = false
-key = "asdaasdfsdaf"
+debug = true
+wtf_csrf_enabled = false
 
