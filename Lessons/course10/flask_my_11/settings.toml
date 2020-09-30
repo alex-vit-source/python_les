@@ -1,0 +1,14 @@
+[default]
+name = "Bruno"
+
+[development]
+debug = true
+
+[production]
+debug = false
+key = "12345"
+
+[sasha]
+debug = false
+key = "asdaasdfsdaf"
+
